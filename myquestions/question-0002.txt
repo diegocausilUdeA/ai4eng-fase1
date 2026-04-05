@@ -1,0 +1,19 @@
+Una empresa de salud digital registra datos de actividad física diaria de pacientes. Cada fila de un DataFrame representa un paciente, e incluye varias columnas numéricas como pasos diarios, minutos de ejercicio, horas de sueño y frecuencia cardiaca en reposo. Además, hay una columna numérica llamada riesgo_cardiaco con un puntaje continuo.
+
+Escribe una función llamada clasificar_riesgo_binario(df, target_col, umbral) que realice lo siguiente:
+
+1. Use únicamente las columnas numéricas del DataFrame.
+2. Separe las variables predictoras X de la variable objetivo y, indicada por target_col.
+3. Convierta y en una variable binaria usando umbral:
+   - 1 si y >= umbral
+   - 0 si y < umbral
+4. Entrene un modelo DecisionTreeClassifier de sklearn con random_state=42.
+5. Devuelva únicamente un np.ndarray con las predicciones binarias del modelo sobre los mismos datos de entrada.
+
+La función debe recibir:
+- df: un pd.DataFrame
+- target_col: un str
+- umbral: un float o int
+
+La función debe devolver:
+- un np.ndarray de una dimensión con valores 0 y 1
