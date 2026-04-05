@@ -1,0 +1,17 @@
+Una empresa de comercio electrónico tiene un DataFrame donde cada fila representa una venta y contiene una columna categórica con el nombre de la categoría del producto, una columna numérica con el valor de la venta y otras columnas adicionales.
+
+Escribe una función llamada obtener_maximo_por_categoria(df, columna_categoria, columna_valor) que realice lo siguiente:
+
+1. Use el DataFrame recibido.
+2. Agrupe por la columna indicada en columna_categoria.
+3. Calcule el valor máximo de la columna numérica indicada en columna_valor para cada categoría.
+4. Ordene las categorías alfabéticamente.
+5. Devuelva únicamente un np.ndarray con los valores máximos, en el mismo orden alfabético de las categorías.
+
+La función debe recibir:
+- df: un DataFrame de pandas
+- columna_categoria: un string con el nombre de la columna categórica
+- columna_valor: un string con el nombre de la columna numérica
+
+La función debe devolver:
+- un np.ndarray de una dimensión con los valores máximos por categoría
