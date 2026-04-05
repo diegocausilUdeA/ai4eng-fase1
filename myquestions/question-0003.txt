@@ -1,0 +1,18 @@
+Una empresa de manufactura inteligente registra mediciones numéricas de sensores de máquinas, como vibración, temperatura, presión y consumo eléctrico. Cada fila de un DataFrame representa una observación de una máquina en un momento dado.
+
+Escribe una función llamada detectar_anomalias_maquina(df, contamination) que realice lo siguiente:
+
+1. Use únicamente las columnas numéricas del DataFrame.
+2. Entrene un modelo IsolationForest de sklearn con random_state=42.
+3. Use el parámetro contamination recibido para controlar la proporción esperada de anomalías.
+4. Prediga cuáles observaciones son anómalas y cuáles normales.
+5. Devuelva únicamente un np.ndarray de una dimensión con las predicciones del modelo, usando el formato estándar de IsolationForest:
+   - -1 para anomalía
+   - 1 para observación normal
+
+La función debe recibir:
+- df: un pd.DataFrame
+- contamination: un float
+
+La función debe devolver:
+- un np.ndarray de una dimensión con valores -1 y 1
