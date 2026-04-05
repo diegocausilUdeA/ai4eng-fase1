@@ -1,0 +1,17 @@
+Recibes un DataFrame de pandas donde cada fila representa una parcela agrícola y contiene varias columnas numéricas predictoras, además de una columna objetivo numérica.
+
+Escribe una función llamada seleccionar_mejores_variables(df, target_col, k) que realice lo siguiente:
+
+1. Separe las variables predictoras X de la variable objetivo y, indicada por target_col.
+2. Use únicamente columnas numéricas en X.
+3. Impute valores faltantes en X usando la media de cada columna.
+4. Aplique SelectKBest de sklearn.feature_selection con el criterio f_regression para seleccionar las k variables más relevantes respecto a y.
+5. Devuelva únicamente un np.ndarray de strings con los nombres de las variables seleccionadas, ordenados tal como los entrega el selector.
+
+La función debe recibir:
+- df: un DataFrame de pandas.
+- target_col: un string con el nombre de la columna objetivo.
+- k: un entero con el número de variables a seleccionar.
+
+La función debe devolver:
+- un np.ndarray de una dimensión con los nombres de las variables seleccionadas.
